@@ -94,4 +94,33 @@ function even_or_odd(number) {
 
 //////////////////////////////
 
+FInd the opposite number ex. -1 , 1     4, -4
+
+function opposite(number) {
+  return(-number);
+}
+
+/////////////////////////////////////////////////////////////////
+
+Write a function called repeatStr which repeats the given string string exactly n times.
+
+repeatStr(6, "I") // "IIIIII"
+repeatStr(5, "Hello") // "HelloHelloHelloHelloHello"
+
+
+
+function repeatStr (n, s) {
+  return s.repeat(n);
+}
+
+///////////////////////////////////////////////////
+
+It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
+
+
+function removeChar(str){
+ return str.slice(1, -1);
+
+};
+
 
