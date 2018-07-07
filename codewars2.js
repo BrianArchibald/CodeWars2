@@ -356,3 +356,18 @@ return arr.find(func);
  
 
 ///////////////////////////////
+You are given two arrays and an index.
+Use the array methods sliceand spliceto copy each element of the first array into the second array, in order.
+Begin inserting elements at index nof the second array.
+Return the resulting array. The input arrays should remain the same after the function runs.
+
+function frankenSplice(arr1, arr2, n) {
+  let NewArr = arr2.slice(0,arr2.length)
+
+NewArr.splice(n, 0,...arr1);
+return NewArr;
+
+}
+frankenSplice([1, 2, 3], [4, 5, 6], 1);
+
+ 
