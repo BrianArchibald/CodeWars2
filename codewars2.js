@@ -414,3 +414,48 @@ function doubleChar(str) {
   };
   return word;
 };
+
+////////////////
+
+Rock paper scissors
+
+Archibald, Brian
+9:21 AM (10 hours ago)
+to me
+
+const rps = (p1, p2) => {
+
+  if (p1 == p2)
+    return 'Draw!';
+   if (p1 == 'rock' && p2 == 'scissors')
+     return 'Player 1 won!'
+   else if (p1 == 'scissors' && p2 == 'paper')
+     return 'Player 1 won!'
+   else if (p1 == 'paper' && p2 == 'rock')
+    return 'Player 1 won!'
+   else
+
+     return 'Player 2 won!';
+
+   /////////////////////////////
+
+Return average
+function find_average(array) {
+
+  return array.reduce( (accumulator, currentValue) => accumulator + currentValue )/array.length;
+
+  /////////////////
+
+  Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
+
+ 
+
+function boolToWord( bool ){
+
+  if (bool) {
+
+    return "Yes";
+
+  }
+
+    return "No";
