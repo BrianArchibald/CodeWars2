@@ -459,3 +459,196 @@ function boolToWord( bool ){
   }
 
     return "No";
+////////////////////////////////////////
+
+Reverse a string
+
+ 
+
+function solution(str){
+
+ 
+
+return str.split("").reverse().join("");
+
+ 
+
+}
+
+ 
+
+Or 10 other ways:
+
+ 
+
+Implementation 1:
+
+function reverse(s) {
+
+ var o = '';
+
+  for (var i = s.length - 1; i >= 0; i--)
+
+    o += s[i];
+
+  return o;
+
+}
+
+Implementation 2:
+
+function reverse(s) {
+
+  var o = [];
+
+  for (var i = s.length - 1, j = 0; i >= 0; i--, j++)
+
+    o[j] = s[i];
+
+  return o.join('');
+
+}
+
+Implementation 3:
+
+function reverse(s) {
+
+  var o = [];
+
+  for (var i = 0, len = s.length; i <= len; i++)
+
+    o.push(s.charAt(len - i));
+
+  return o.join('');
+
+}
+
+Implementation 4:
+
+function reverse(s) {
+
+  return s.split('').reverse().join('');
+
+}
+
+Implementation 5:
+
+function reverse(s) {
+
+  var i = s.length,
+
+      o = '';
+
+  while (i > 0) {
+
+    o += s.substring(i - 1, i);
+
+    i--;
+
+  }
+
+  return o;
+
+}
+
+Implementation 6:
+
+function reverse(s) {
+
+  for (var i = s.length - 1, o = ''; i >= 0; o += s[i--]) { }
+
+  return o;
+
+}
+
+Implementation 7:
+
+function reverse(s) {
+
+  return (s === '') ? '' : reverse(s.substr(1)) + s.charAt(0);
+
+}
+
+Implementation 8:
+
+function reverse(s) {
+
+  function rev(s, len, o) {
+
+    return (len === 0) ? o : rev(s, --len, (o += s[len]));
+
+  };
+
+  return rev(s, s.length, '');
+
+}
+
+Implementation 9:
+
+function reverse(s) {
+
+  s = s.split('');
+
+  var len = s.length,
+
+      halfIndex = Math.floor(len / 2) - 1,
+
+      tmp;
+
+ 
+
+ 
+
+     for (var i = 0; i <= halfIndex; i++) {
+
+        tmp = s[len - i - 1];
+
+        s[len - i - 1] = s[i];
+
+        s[i] = tmp;
+
+      }
+
+      return s.join('');
+
+    }
+
+Implementation 10
+
+function reverse(s) {
+
+  if (s.length < 2)
+
+    return s;
+
+  var halfIndex = Math.ceil(s.length / 2);
+
+  return reverse(s.substr(halfIndex)) +
+
+         reverse(s.substr(0, halfIndex));
+
+
+         //////////////////////////////////////////////////
+
+It's bonus time in the big city! The fatcats are rubbing their paws in anticipation... but who is going to make the most money?
+Build a function that takes in two arguments (salary, bonus). Salary will be an integer, and bonus a boolean.
+If bonus is true, the salary should be multiplied by 10. If bonus is false, the fatcat did not make enough money and must receive only his stated salary.
+Return the total figure the individual will receive as a string prefixed with "£" (= "\u00A3", JS and Java) or "$" (C#, C++, Ruby, Clojure, Elixir, PHP and Python).
+
+ 
+function bonusTime(salary, bonus) {
+  if (bonus) {
+  return "\u00A3" + salary * 10;
+  }
+  return "\u00A3" + salary;
+}
+Or
+
+function bonusTime(salary, bonus) {
+
+  return bonus ? `£${10 * salary}` : `£${salary}`;
+
+}
+
+//////////////////////////////////
+
