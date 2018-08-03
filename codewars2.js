@@ -662,3 +662,61 @@ function isDivisible(n, x, y) {
 }
 ///////////////////////////////
 
+our task is to make two functions, max and min (maximum and minimum in PHP) that take a(n) array/vector of integers list as input and outputs, respectively, the largest and lowest number in that array/vector.
+
+const min = (list) => Math.min(...list);
+
+const max = (list) => Math.max(...list);
+
+//////////////////////////
+
+Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+
+function fakeBin(str){
+  var newStr = "";
+  for(var i=0;i<str.length;i++){
+    if(Number(str[i])>=5){
+      newStr += "1"
+    }
+    else{
+      newStr += "0";
+    }
+  }
+  return newStr;
+
+or
+
+function fakeBin(x) {
+
+    return x.split('').map(n => n < 5 ? 0 : 1).join('');
+
+    /////////////////////////////////////////////////
+The first century spans from the year 1 up to and including the year 100, The second - from the year 101 up to and including the year 200, etc.
+
+Task :
+
+Given a year, return the century it is in.
+
+Input , Output Examples ::
+
+centuryFromYear(1705)  returns (18)
+
+centuryFromYear(1900)  returns (19)
+
+const century = year => Math.ceil(year/100)
+/////////////////////
+
+Get the number n (n>0) to return the reversed sequence from n to 1.
+
+Example : n=5 >> [5,4,3,2,1]
+
+const reverseSeq = n => {
+
+let arr = [];
+  for (let i=n; i>0; i--) {
+    arr.push(i);
+    } return arr;
+};
+
+/////////////////////////
+
