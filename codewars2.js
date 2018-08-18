@@ -823,5 +823,30 @@ const humanYearsCatYearsDogYears = humanYears => [
 ];
 
 /////////////////////////////////////////////////
+write me a function stringy that takes a size and returns a string of alternating '1s' and '0s'.
+the string should start with a 1.
+a string with size 6 should return :'101010'.
+with size 4 should return : '1010'.
+with size 12 should return : '101010101010'.
+The size will always be positive and will only use whole numbers.
 
-   
+ function stringy(size) {
+ var str='';
+  for( var i=1; i<=size; i++ )
+    str+=i%2;
+  return str;
+
+}/////////////////////////////////////
+/////////////////
+You need to write a function that reverses the words in a given string. A word can also fit an empty string. If this is not clear enough, here are some examples:
+As the input may have trailing spaces, you will also need to ignore unneccesary whitespace.
+reverse('Hello World') === 'World Hello'
+reverse('Hi There.') === 'There. Hi'
+
+function reverse(string){
+
+  return string.split(' ').reverse().join(' ');
+
+}
+///////////////////////////////////
+
