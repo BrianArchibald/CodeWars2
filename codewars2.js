@@ -850,3 +850,32 @@ function reverse(string){
 }
 ///////////////////////////////////
 
+Given an array of integers, return a new array with each value doubled.
+
+For example:
+
+[1, 2, 3] --> [2, 4, 6]
+
+function maps(x){
+
+    const newArray = x.map(x => x * 2);
+
+    return newArray;
+}
+function maps(x){
+
+  return x.map(n => n * 2);
+  /////////////////////////////////////
+Write a method smash that takes an array of words and smashes them together into a sentence and returns the sentence. You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. Be careful, there shouldn't be a space at the beginning or the end of the sentence!
+Example
+var words = ['hello', 'world', 'this', 'is', 'great'];
+smash(words); // returns "hello world this is great"
+
+smash = function (words) {
+
+  return words.join(" ");
+
+};
+
+////////////////////////
+
