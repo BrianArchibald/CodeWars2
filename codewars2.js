@@ -879,3 +879,22 @@ smash = function (words) {
 
 ////////////////////////
 
+Replace all vowels with !
+
+function replace(s){
+
+  return s.replace(/[aeiou]/gi, "!");
+
+}
+
+////////////////////
+
+Remove all !’s in a string
+
+function removeExclamationMarks(s) {
+
+  return s.replace(/!/gi, ‘’);
+
+}
+//////////////////
+
