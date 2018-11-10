@@ -911,5 +911,73 @@ function past(h, m, s){
   return ((h*3600)+(m*60)+s)*1000;
 }
 ///////////////////////
+///////11/9/18///////////
 
+ 
+
+You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
+
+Array can contain numbers or strings. X can be either.
+
+Return true if the array contains the value, false if not.
+
+ 
+
+function check(a,x){
+
+  if (a.includes(x)){
+
+    return true;
+
+  } else {
+
+    return false;
+
+  }
+
+};
+
+or
+
+const check = (a,x) => a.includes(x);
+
+ 
+
+///////////////////////////////////
+
+//////////////////////////////////
+
+ 
+
+  In this simple Kata your task is to create a function that turns a string into a Mexican Wave.
+
+  You will be passed a string and you must return that string in an array where an uppercase letter is a person standing up.
+
+Rules
+
+  1.  The input string will always be lower case but maybe empty.
+
+2.  If the character in the string is whitespace then pass over it as if it was an empty seat.
+
+Example
+
+wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
+
+ 
+
+function wave(str){
+
+    let result = [];   
+
+    str.split("").forEach((char, index) => {
+
+        if (/[a-z]/.test(char)) {
+
+            result.push(str.slice(0, index) + char.toUpperCase() + str.slice(index + 1));
+
+        }
+
+    });
+
+    return result;
 
