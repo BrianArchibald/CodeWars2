@@ -980,4 +980,65 @@ function wave(str){
     });
 
     return result;
+    /////////////////////////////////
+Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+
+The output should be two capital letters with a dot seperating them.
+
+It should look like this:
+
+Sam Harris => S.H
+
+ 
+
+function abbrevName(name){
+
+  var nameArray = name.split(" ");
+
+  return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase();
+
+}
+
+//nameArray[0] targets the first element of the array and nameArray[0][0] targets the first element of the first element.
+
+//In this case, the first element of the first element is the first charater of that string.
+////////////////////////////////////////////////////////
+
+After a hard quarter in the office you decide to get some rest on a vacation.
+
+So you will book a flight for you and your girlfriend and try to leave all the mess behind you.
+
+You will need a rental car in order for you to get around in your vacation. The manager of the car rental makes you some good offers.
+
+Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total.
+
+Alternatively, if you rent the car for 3 or more days, you get $20 off your total.
+
+Write a code that gives out the total amount for different days(d).
+
+ 
+
+function rentalCarCost(d) {
+
+  var cost = d * 40
+
+  if (d > 2 && d < 7) {
+
+     cost = cost - 20;
+
+  } else {
+
+    if (d > 6) {
+
+    cost = cost - 50;
+
+    }
+
+  }
+
+  return cost;
+
+}
+
+////////////////////////////////////////
 
