@@ -1056,3 +1056,13 @@ else if (i % 3 === 0) { console.log("fizz"); }
 else { console.log(i); } }
 
 }
+
+//////////////////////////////////////////////////
+
+get new aray with every other element.
+
+function removeEveryOther(arr){
+  return arr.filter(function(elem, index) {
+    return index % 2 === 0;
+  });
+}
