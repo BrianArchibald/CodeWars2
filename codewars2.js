@@ -1066,3 +1066,24 @@ function removeEveryOther(arr){
     return index % 2 === 0;
   });
 }
+
+////////////////////////
+
+reverse integer
+
+function reverseInt(n) {
+parseInt(n.toString().split('').reverse().join('')) * Math.sign(n);
+}
+///////////////////////////
+
+how many vowels in string (no regex)
+function vowels(str) {
+let count = 0;
+for (let char of str.toLowerCase()) {
+if (['a','e','i','o','u'].includes(char)) {
+count++
+}
+} return count;
+}
+//////////////////////////////////
+
