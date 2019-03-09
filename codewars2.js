@@ -1388,5 +1388,61 @@ and 1634 (4 digits):
         }, 0) == value;
     }
     //////////////////////
+    Complete the function which takes two arguments and returns all numbers which are divisible by given divisor. First argument is an array of numbers and the second is the divisor.
 
+    Example
+    
+    divisibleBy([1, 2, 3, 4, 5, 6], 2) == [2, 4, 6]
+    
+    divisibleBy([1, 2, 3, 4, 5, 6], 2) == [2, 4, 6]
+    
+     
+    
+    function divisibleBy(numbers, divisor) {
+    
+      return numbers.filter(n => n % divisor === 0)
+    
+  ///////////////////////////////////////////////
+
+  Simple, given a string of words, return the length of the shortest word(s).
+
+String will never be empty and you do not need to account for different data types.
+
+ 
+
+ 
+
+function findShort(s){
+
+  var arr = s.split(' ');
+
+  var smallest = arr[0];
+
+  for (var i = 0; i < arr.length; i++) {
+
+    if(arr[i].length < smallest.length){
+
+      smallest = arr[i];
+
+    }
+
+  }
+
+  return smallest.length;
+
+}
+
+function findShort(s){
+
+  return Math.min.apply(null, s.split(' ').map(w => w.length));
+
+}
+
+ 
+
+function findShort(s){
+
+    return Math.min(...s.split(" ").map (s => s.length));
+
+}
     
